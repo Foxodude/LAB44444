@@ -7,36 +7,36 @@ import random
 
 def checker1(num):
     if num % 3 == 0: 
-        print("Число делится на 3")
+        print("Р§РёСЃР»Рѕ РґРµР»РёС‚СЃСЏ РЅР° 3")
     else: 
-        print("Число не делится на 3")
+        print("Р§РёСЃР»Рѕ РЅРµ РґРµР»РёС‚СЃСЏ РЅР° 3")
 
 def delitel(num):    
     if flags == True:
         num = int(num)
         x = num / 100
         x = str(x)
-        final = x + " Число, которое получилось"
+        final = x + " Р§РёСЃР»Рѕ, РєРѕС‚РѕСЂРѕРµ РїРѕР»СѓС‡РёР»РѕСЃСЊ"
         print (final)
     else:
-        print("Это не число, а нужно число")
+        print("Р­С‚Рѕ РЅРµ С‡РёСЃР»Рѕ, Р° РЅСѓР¶РЅРѕ С‡РёСЃР»Рѕ")
         
     if num != 0 and flags == True:
         num = int(num)
         x = num / 100
         x = str(x)
-        final = x + " Число, которое получилось"
+        final = x + " Р§РёСЃР»Рѕ, РєРѕС‚РѕСЂРѕРµ РїРѕР»СѓС‡РёР»РѕСЃСЊ"
         print (final)
     else:
-        print("0 тоже нельзя")
+        print("0 С‚РѕР¶Рµ РЅРµР»СЊР·СЏ")
 
 def magicChecker(dateCheck):
    day, month, year = map(int, dateCheck.split("."))
    
    if day * month == (year % 100):
-       print("Дата магическая")
+       print("Р”Р°С‚Р° РјР°РіРёС‡РµСЃРєР°СЏ")
    else:
-       print("дата не магическая")
+       print("РґР°С‚Р° РЅРµ РјР°РіРёС‡РµСЃРєР°СЏ")
     
 def bileter(bilet):
     x = len(bilet)
@@ -47,29 +47,29 @@ def bileter(bilet):
     sumFirPart = sum(int(char) for char in firPart)
     sumSecPart = sum(int(char) for char in secPart)
     if sumFirPart == sumSecPart:
-        print("Билет счастливый")
+        print("Р‘РёР»РµС‚ СЃС‡Р°СЃС‚Р»РёРІС‹Р№")
     else:
-        print("Билет не счастливый")
+        print("Р‘РёР»РµС‚ РЅРµ СЃС‡Р°СЃС‚Р»РёРІС‹Р№")
 
 while True:
   
     checker = False
-    primaryChoice = input("Выбор задания для проверки : \n1)\n2)\n3)\n4)\n5) - Выход\nВыбор : ")
+    primaryChoice = input("Р’С‹Р±РѕСЂ Р·Р°РґР°РЅРёСЏ РґР»СЏ РїСЂРѕРІРµСЂРєРё : \n1)\n2)\n3)\n4)\n5) - Р’С‹С…РѕРґ\nР’С‹Р±РѕСЂ : ")
     if [num for num in primaryChoice if num not in ".,/*-+1234567890"]: checker = True
     if checker == True:
-        print("Так нельзя")
+        print("РўР°Рє РЅРµР»СЊР·СЏ")
         break
     primaryChoice = int(primaryChoice)
     
     if primaryChoice == 1:
-        print("Введите число для проверки для деления на 3 : ")
+        print("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РґР»СЏ РїСЂРѕРІРµСЂРєРё РґР»СЏ РґРµР»РµРЅРёСЏ РЅР° 3 : ")
         num = input()
         num = int(num)
         checker1(num)
         
     if primaryChoice == 2:
-        print("Введите число, которое будет делить сотню")
-        num = input("Нельзя вводить 0 или не число : ")
+        print("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ, РєРѕС‚РѕСЂРѕРµ Р±СѓРґРµС‚ РґРµР»РёС‚СЊ СЃРѕС‚РЅСЋ")
+        num = input("РќРµР»СЊР·СЏ РІРІРѕРґРёС‚СЊ 0 РёР»Рё РЅРµ С‡РёСЃР»Рѕ : ")
         num = str(num)
         for char in num:
             if char < '0' or char > '9':
@@ -80,14 +80,14 @@ while True:
         
     if primaryChoice == 3:
         flags = False
-        dateCheck = input("Введите дату по правилу ДД.ММ.ГГГГ ")
+        dateCheck = input("Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ РїРѕ РїСЂР°РІРёР»Сѓ Р”Р”.РњРњ.Р“Р“Р“Р“ ")
         magicChecker(dateCheck)
     
     if primaryChoice == 4:
-        bilet = input("Введите номер билета ")
+        bilet = input("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р±РёР»РµС‚Р° ")
         x = len(bilet)
         if x % 2 != 0:
-            print("Число чисел всегда должно быть четным")
+            print("Р§РёСЃР»Рѕ С‡РёСЃРµР» РІСЃРµРіРґР° РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ С‡РµС‚РЅС‹Рј")
         else:
             bileter(bilet)
     if primaryChoice == 5:
